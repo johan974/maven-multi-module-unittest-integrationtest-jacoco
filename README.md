@@ -10,5 +10,5 @@ Demo of 'Maven multi module' project WITH unit- and integration testing with Fin
    
 # Run
 
-   $ mvn clean install                      => unit testing + reporting
-   $ mvn clean install -P integration test  => integration testing + reporting
+   * mvn clean install                      => unit testing + reporting
+   * mvn clean install -P integration test  => integration testing + reporting
