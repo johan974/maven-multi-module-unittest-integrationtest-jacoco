@@ -14,4 +14,4 @@ Demo of 'Maven multi module' project WITH unit- and integration testing with Fin
    * mvn clean install -P integration test  => integration testing + reporting
    
 # Overview: 
-![Overview](https://github.com/johan974/maven-multi-module-unittest-integrationtest-jacoco/TestResults.png)
+<img src="TestResults.png" alt="Overview of the results"/>)
