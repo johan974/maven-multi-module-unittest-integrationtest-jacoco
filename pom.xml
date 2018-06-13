@@ -19,6 +19,7 @@
         <skip.unit.tests>false</skip.unit.tests>
         <skip.integration.tests>true</skip.integration.tests>
         <itCoverageAgent></itCoverageAgent>
+        <my.project.version>1.0-SNAPSHOT</my.project.version>
     </properties>
 
     <dependencies>
