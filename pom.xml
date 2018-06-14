@@ -13,12 +13,14 @@
         <module>module1</module>
         <module>module2</module>
         <module>testing</module>
+        <module>module3</module>
     </modules>
 
     <properties>
         <skip.unit.tests>false</skip.unit.tests>
         <skip.integration.tests>true</skip.integration.tests>
         <itCoverageAgent></itCoverageAgent>
+        <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
     </properties>
 
     <dependencies>
