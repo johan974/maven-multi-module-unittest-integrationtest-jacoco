@@ -6,8 +6,9 @@ import cucumber.api.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/functionaltest/resources/features",
-        glue = "junitcucumber"
+//        features = "src/test/resources/features/user.feature",
+        features = "src/test/resources/features",
+        glue = "cucumbertest"
 )
 public class UserTest {
 }

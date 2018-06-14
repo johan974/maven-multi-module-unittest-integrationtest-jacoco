@@ -21,6 +21,7 @@
         <skip.integration.tests>true</skip.integration.tests>
         <itCoverageAgent></itCoverageAgent>
         <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
+        <my.project.version>1.0-SNAPSHOT</my.project.version>
     </properties>
 
     <dependencies>
@@ -33,12 +34,14 @@
     </dependencies>
 
     <profiles>
+        <!-- Unit test only -->
         <profile>
             <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
+        <!-- Integration test only -->
         <profile>
             <id>integration-test</id>
             <properties>
@@ -46,6 +49,15 @@
                 <skip.unit.tests>true</skip.unit.tests>
             </properties>
         </profile>
+        <!-- Unit and Integration tests combined -->
+        <profile>
+            <id>test-all</id>
+            <properties>
+                <skip.integration.tests>false</skip.integration.tests>
+                <skip.unit.tests>false</skip.unit.tests>
+            </properties>
+        </profile>
+
     </profiles>
 
     <build>
@@ -112,12 +124,39 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
                 <executions>
+                    <!-- METHOD 1 -->
+                        <!--<execution>-->
+                            <!--<id>prepare-agent</id>-->
+                            <!--<goals>-->
+                                <!--<goal>prepare-agent</goal>-->
+                            <!--</goals>-->
+                        <!--</execution>-->
+                        <!-- prepare agent for measuring unit tests -->
+
+                    <!-- METHOD 2 -->
+                    <execution>
+                        <id>prepare-unit-tests</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                        <!--<configuration>-->
+                            <!--<destFile>${sonar.jacoco.reportPath}</destFile>-->
+                        <!--</configuration>-->
+                    </execution>
+
+                    <!-- prepare agent for measuring integration tests -->
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+                        <phase>pre-integration-test</phase>
+                        <configuration>
+                            <!--<destFile>${sonar.jacoco.itReportPath}</destFile>-->
+                            <propertyName>itCoverageAgent</propertyName>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

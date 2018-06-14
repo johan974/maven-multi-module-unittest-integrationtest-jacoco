@@ -19,17 +19,17 @@
         <dependency>
             <groupId>nl.deholtmans</groupId>
             <artifactId>module1</artifactId>
-            <version>${version}</version>
+            <version>${my.project.version}</version>
         </dependency>
         <dependency>
             <groupId>nl.deholtmans</groupId>
             <artifactId>module2</artifactId>
-            <version>${version}</version>
+            <version>${my.project.version}</version>
         </dependency>
         <dependency>
             <groupId>nl.deholtmans</groupId>
             <artifactId>module3</artifactId>
-            <version>${version}</version>
+            <version>${my.project.version}</version>
         </dependency>
     </dependencies>
 
