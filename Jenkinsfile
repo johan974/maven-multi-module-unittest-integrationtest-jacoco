@@ -4,7 +4,7 @@ node {
    }
    stage('build and unit-test') {
       // all tests: other variants: only unit, integration, or all (incl. functional testing)
-      sh 'mvn clean site -P test-all'
+      sh 'mvn clean install -P test-all'
    }
    stage('SonarQube analysis') {
       withSonarQubeEnv('sonar2') {
