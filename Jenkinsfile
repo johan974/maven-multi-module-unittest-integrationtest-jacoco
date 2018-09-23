@@ -3,7 +3,8 @@ node {
       checkout scm
    }
    stage('build and unit-test') {
-      sh 'mvn clean package'
+      // all tests: other variants: only unit, integration, or all (incl. functional testing)
+      sh 'mvn clean package -P test-all'
    }
    stage('SonarQube analysis') {
       withSonarQubeEnv('sonar2') {
