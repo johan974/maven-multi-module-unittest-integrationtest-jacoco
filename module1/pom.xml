@@ -8,8 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>nl.deholtmans.jacoco-multi-module-demo</groupId>
+    
     <artifactId>module1</artifactId>
+    <packaging>jar</packaging>
+    <name>module1</name>
 
     <!-- <dependencies>
         <dependency>
