@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/johan974/maven-multi-module-unittest-integrationtest-jacoco)
+
 # maven-multi-module-unittest-integrationtest-jacoco
 
 Demo of 'Maven multi module' project WITH unit- and/or integration testing with FindBugs and Jacoco code coverage

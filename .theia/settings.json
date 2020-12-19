@@ -1,0 +1,8 @@
+{
+    "java.configuration.runtimes": [  {
+    "name": "JavaSE-11",
+    "path": "/home/gitpod/.sdkman/candidates/java/current"
+}
+],
+"java.configuration.updateBuildConfiguration": "interactive"
+}
