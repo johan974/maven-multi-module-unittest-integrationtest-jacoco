@@ -22,6 +22,7 @@
         <itCoverageAgent></itCoverageAgent>
         <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
         <my.project.version>1.0-SNAPSHOT</my.project.version>
+        <sonar.jacoco.reportPaths>${maven.multiModuleProjectDirectory}/target/aggregate.exec</sonar.jacoco.reportPaths>
     </properties>
 
     <dependencies>
